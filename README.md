@@ -208,4 +208,4 @@ SELECT id as "código", sobrenome_cliente as "Sobrenome do cliente",
 nome_cliente FROM tb_loyalty WHERE id < 10 group by sobrenome_cliente 
 having nome_cliente <>"Maria" order by id ASC;
 ```
-comando cria um filtro onde retorna apenas as colunas id, sobrenome_cliente, nome_cliente onde o id for menor que 10, agrupando por sobrenome(elimina sobrenomes repetidos) e valida se o nome é diferente de Maria, i ainda ordena tudo pelo Id de forma crescente.
+comando cria um filtro onde retorna apenas as colunas id, sobrenome_cliente, nome_cliente onde o id for menor que 10, agrupando por sobrenome(elimina sobrenomes repetidos) e valida se o nome é diferente de Maria, e ainda ordena tudo pelo Id de forma crescente.

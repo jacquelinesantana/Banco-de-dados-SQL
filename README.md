@@ -231,4 +231,5 @@ Outros comandos:
 SHOW DATABASES;
 USE banco-de-dados;
 SHOW TABLES;
-
+CREATE DATABASE loyalty_program;
+USE loyalty_program;

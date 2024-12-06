@@ -42,8 +42,11 @@ IGNORE 1 ROWS
 8. Verificar se os dados foram inputados com sucesso:
 `SELECT * FROM tb_cliente;`
 9. Caso falhar a importação dos dados verifique:
+    
     a) O caminho que aponta para o seu arquivo csv esta correto?
+   
     b) O nome do arquivo csv esta correto?
+   
     c) Você tem o cal_infile habilitado? Caso não execute comando: `SET GLOBAL local_infile = 1;`
 LOAD DATA LOCAL INFILE '/home/ec2-user/dados.csv'
 

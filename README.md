@@ -183,6 +183,16 @@ A ordem deve corresponder exatamente à ordem no arquivo.
 
 ## SELECT
 
+Estrutura:
+
+SELECT - comando
+
+(*) - colunas
+
+FROM - comando que indica o local onde será realizada a seleção
+
+tb_cliente - nome da tabela do banco de dados que vamos selecionar/retornar os dados
+
 Este comando é utilizado para selecionar/ retornar os dados persistidos em uma tabela.
 
 Podemos passar para esse comando alguns refinamentos para a busca, tornando-a mais assertiva ao objetivo final, como por exemplo definir quais colunas da tabela desejamos ver, quantas e quais linhas de registro queremos ver, entre outros critérios que podem ser aplicados.

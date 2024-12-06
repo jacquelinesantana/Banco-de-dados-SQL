@@ -184,9 +184,13 @@ A ordem deve corresponder exatamente à ordem no arquivo.
 ## SELECT
 
 Este comando é utilizado para selecionar/ retornar os dados persistidos em uma tabela.
+
 Podemos passar para esse comando alguns refinamentos para a busca, tornando-a mais assertiva ao objetivo final, como por exemplo definir quais colunas da tabela desejamos ver, quantas e quais linhas de registro queremos ver, entre outros critérios que podem ser aplicados.
+
 `SELECT * FROM tb_cliente; ` retorna todos os registros da tabela que informamos o nome, o * é um coringa para retornar todas as colunas.
+
 `SELECT id,sobrenome_cliente FROM tb_cliente; ` retorna apenas as colunas id e sobrenome_cliente da tabela informada(tb_cliente).
+
 `SELECT id as codigo, sobrenome_cliente as "Sobrenome do Cliente", nome_cliente as Nome FROM tb_cliente; ` retorna apenas as colunas informadas, porém agora passamos um ALIAS, apelido para cada coluna.
 
 

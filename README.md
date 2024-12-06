@@ -113,6 +113,7 @@ Santos,João,FL789012,11976543210,joao.santos@email.com,500
 Oliveira,Ana,FL345678,11965432109,ana.oliveira@email.com,100
 Pereira,Carlos,FL901234,11954321098,carlos.pereira@email.com,750
 Costa,Juliana,FL567890,11943210987,juliana.costa@email.com,350
+Silva,Maria,FL123456,11987654321,maria.silva@email.com,250
 
 ```
 

@@ -218,7 +218,7 @@ Atualiza para a tabela informada, colocando para a coluna definida o valor infor
 
 OBS: indicamos sempre utilizar um critério ao atualizar registros de uma tabela para evitar situações onde todos os clientes talvez sejam nomeados de teste. 
 
-##DELETE
+## DELETE
 Deletar registros de uma tabela. Para esse comando indicamos fortemente passar sempre um critério WHERE para evitar apagar todo os registros de uma tabela.
 
 Exemplo:

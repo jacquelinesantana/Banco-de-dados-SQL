@@ -113,7 +113,6 @@ Santos,João,FL789012,11976543210,joao.santos@email.com,500
 Oliveira,Ana,FL345678,11965432109,ana.oliveira@email.com,100
 Pereira,Carlos,FL901234,11954321098,carlos.pereira@email.com,750
 Costa,Juliana,FL567890,11943210987,juliana.costa@email.com,350
-Silva,Maria,FL123456,11987654321,maria.silva@email.com,250
 
 ```
 
@@ -209,4 +208,27 @@ SELECT id as "código", sobrenome_cliente as "Sobrenome do cliente",
 nome_cliente FROM tb_loyalty WHERE id < 10 group by sobrenome_cliente 
 having nome_cliente <>"Maria" order by id ASC;
 ```
-comando cria um filtro onde retorna apenas as colunas id, sobrenome_cliente, nome_cliente onde o id for menor que 10, agrupando por sobrenome(elimina sobrenomes repetidos) e valida se o nome é diferente de Maria, e ainda ordena tudo pelo Id de forma crescente.
+comando cria um filtro onde retorna apenas as colunas id, sobrenome_cliente, nome_cliente onde o id for menor que 10, agrupando por sobrenome(elimina sobrenomes repetidos) e valida se o nome é diferente de Maria, i ainda ordena tudo pelo Id de forma crescente.
+
+## UPDATE
+Atualizando os dados de um registro, esse comando tem como objetivo atualizar os registros de uma tupla(linha) ou um conjunto de registros. 
+
+`UPDATE table SET coluna = "valor" WHERE id = 1;`
+Atualiza para a tabela informada, colocando para a coluna definida o valor informado, onde o critério do Where for atendido.
+
+OBS: indicamos sempre utilizar um critério ao atualizar registros de uma tabela para evitar situações onde todos os clientes talvez sejam nomeados de teste. 
+
+##DELETE
+Deletar registros de uma tabela. Para esse comando indicamos fortemente passar sempre um critério WHERE para evitar apagar todo os registros de uma tabela.
+
+Exemplo:
+```
+DELETE FROM tabela WHERE id = 1
+```
+O comando acima vai apagar uma linha do banco de dados onde o id atende o critério de ser igual a 1.
+
+Outros comandos:
+SHOW DATABASES;
+USE banco-de-dados;
+SHOW TABLES;
+

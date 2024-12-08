@@ -1,6 +1,7 @@
 CREATE DATABASE db_loja;
 USE db_loja; -- seleciona o banco de dados em uso --
 
+-- criar a tabela tb_cliente --
 CREATE TABLE tb_cliente (
     id INT AUTO_INCREMENT PRIMARY KEY,
     sobrenome_cliente VARCHAR(100) NOT NULL,
@@ -11,10 +12,14 @@ CREATE TABLE tb_cliente (
     saldo_pontos INT DEFAULT 0
 );
 
+-- exibir todas as tabelas
 SHOW TABLES;
 
+-- exibir a descrição de uma tabela
 DESCRIBE tb_cliente;
 
+
+-- insert de todos os campos de uma tabela
 INSERT INTO tb_cliente VALUES (
 1, "Silva", "Renata", "F123456", "11999999999", "email@email.com",1200
 );
@@ -34,17 +39,19 @@ INSERT INTO tb_cliente VALUES
 (0, "Lewandowski", "Doofenshmirtz", "F121454", "11991999990", "email8@email.com",0);
 
 SELECT * FROM tb_cliente; -- * todas as colunas --
+
+-- selecionar algumas colunas do banco passando Alias para as colunas
 SELECT nome_cliente AS "Nome do Cliente", sobrenome_cliente AS "Sobrenome do cliente", id AS "Código" FROM tb_cliente;
 
 SELECT nome_cliente AS "Nome do Cliente", 
 sobrenome_cliente AS "Sobrenome do cliente", 
 id AS "Código" FROM tb_cliente
-WHERE saldo_pontos > 0; -- operadores --
+WHERE saldo_pontos > 0; -- operadores -- filtra quais os retornos devemos ter
 
 SELECT nome_cliente AS "Nome do Cliente", 
 sobrenome_cliente AS "Sobrenome do cliente", 
 id AS "Código" FROM tb_cliente
-WHERE saldo_pontos = 0; -- operadores --
+WHERE saldo_pontos = 0; -- operadores -- 
 
 SELECT nome_cliente AS "Nome do Cliente", 
 sobrenome_cliente AS "Sobrenome do cliente", 
@@ -59,6 +66,11 @@ ENCLOSED BY '"'
 LINES TERMINATED BY '\n' 
 IGNORE 1 ROWS 
 (sobrenome_cliente, nome_cliente, numero_fidelidade, contato, email, saldo_pontos);
+SET GLOBAL local_infile = 1;
+
 
 -- update não indicado pq vai alterar tudo --
 UPDATE tb_cliente SET sobrenome_cliente ="bittencourt";
+
+-- agrupo os retornos por saldopontos
+select Count(nome_cliente) from tb_cliente group by saldo_pontos;
